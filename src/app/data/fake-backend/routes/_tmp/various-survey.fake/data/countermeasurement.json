@@ -1,0 +1,179 @@
+[
+    {
+      "reqIvgKey": "S21-0010",
+      "measures": [
+        { 
+            "ivgCmNo": "G01",
+            "dispNo": "01",
+            "isDelete": "false", 
+            "cmStatus": {
+              "isUpdate": false,
+              "status": "testStatus",
+              "content": "testContent",
+              "cmEsdDate": "testCmEsdDate",
+              "cmDate": "testCmDate", 
+              "cmLotNo": "testCmLotNo", 
+              "sckShipDate": "testsckShipDate",
+              "reName": "testsckShipDate",
+              "reDate": "testsckShipDate"
+            },
+            "cmDisclosure": { 
+              "isUpdate": false,
+              "disclose": "",
+              "content": "",
+              "cmEsdDate": "",
+              "cmDate": "",
+              "cmLotNo": "",
+              "sckShipDate": "",
+              "reName": "", 
+              "reDate": ""
+            },
+            "cmRollout": { 
+              "isUpdate": false, 
+              "rollOut": "", 
+              "content": "", 
+              "cmEsdDate":"", 
+              "cmDate": "", 
+              "cmLotNo": "", 
+              "sckShipDate": "", 
+              "reName": "",
+              "reDate": ""
+            }
+
+           
+        },
+        { 
+          "ivgCmNo": "G01",
+          "dispNo": "02",
+          "isDelete": "false", 
+          "cmStatus": {
+            "isUpdate": false,
+            "status": "testStatus",
+            "content": "testContent",
+            "cmEsdDate": "testCmEsdDate",
+            "cmDate": "testCmDate", 
+            "cmLotNo": "testCmLotNo", 
+            "sckShipDate": "testsckShipDate",
+            "reName": "testsckShipDate",
+            "reDate": "testsckShipDate"
+          },
+          "cmDisclosure": { 
+            "isUpdate": false,
+            "disclose": "",
+            "content": "",
+            "cmEsdDate": "",
+            "cmDate": "",
+            "cmLotNo": "",
+            "sckShipDate": "",
+            "reName": "", 
+            "reDate": ""
+          },
+          "cmRollout": { 
+            "isUpdate": false, 
+            "rollOut": "", 
+            "content": "", 
+            "cmEsdDate":"", 
+            "cmDate": "", 
+            "cmLotNo": "", 
+            "sckShipDate": "", 
+            "reName": "",
+            "reDate": ""
+          }
+
+         
+      }
+      
+      ]
+    },
+    {
+      "reqIvgKey": "S21-0010",
+      "measures": [
+        { 
+            "ivgCmNo": "G02",
+            "dispNo": "01",
+            "isDelete": "false", 
+            "cmStatus": {
+              "isUpdate": false,
+              "status": "testStatus",
+              "content": "testContent",
+              "cmEsdDate": "testCmEsdDate",
+              "cmDate": "testCmDate", 
+              "cmLotNo": "testCmLotNo", 
+              "sckShipDate": "testsckShipDate",
+              "reName": "testsckShipDate",
+              "reDate": "testsckShipDate"
+            },
+            "cmDisclosure": { 
+              "isUpdate": false,
+              "disclose": "",
+              "content": "",
+              "cmEsdDate": "",
+              "cmDate": "",
+              "cmLotNo": "",
+              "sckShipDate": "",
+              "reName": "", 
+              "reDate": ""
+            },
+            "cmRollout": { 
+              "isUpdate": false, 
+              "rollOut": "", 
+              "content": "", 
+              "cmEsdDate":"", 
+              "cmDate": "", 
+              "cmLotNo": "", 
+              "sckShipDate": "", 
+              "reName": "",
+              "reDate": ""
+            }
+        }
+      
+      ]
+    },
+    {
+      "reqIvgKey": "S21-0010",
+      "measures": [
+        { 
+            "ivgCmNo": "G03",
+            "dispNo": "01",
+            "isDelete": "false", 
+            "cmStatus": {
+              "isUpdate": false,
+              "status": "testStatus",
+              "content": "testContent",
+              "cmEsdDate": "testCmEsdDate",
+              "cmDate": "testCmDate", 
+              "cmLotNo": "testCmLotNo", 
+              "sckShipDate": "testsckShipDate",
+              "reName": "testsckShipDate",
+              "reDate": "testsckShipDate"
+            },
+            "cmDisclosure": { 
+              "isUpdate": false,
+              "disclose": "",
+              "content": "",
+              "cmEsdDate": "",
+              "cmDate": "",
+              "cmLotNo": "",
+              "sckShipDate": "",
+              "reName": "", 
+              "reDate": ""
+            },
+            "cmRollout": { 
+              "isUpdate": false, 
+              "rollOut": "", 
+              "content": "", 
+              "cmEsdDate":"", 
+              "cmDate": "", 
+              "cmLotNo": "", 
+              "sckShipDate": "", 
+              "reName": "",
+              "reDate": ""
+            }
+
+           
+        }
+      
+      ]
+    }
+
+  ]

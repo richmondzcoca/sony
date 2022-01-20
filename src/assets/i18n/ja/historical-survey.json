@@ -1,0 +1,48 @@
+{
+  "sqrm": {
+
+    "SQ_L13923": "History :",
+    "SQ_L13924": "Lot history",
+    "SQ_L13925": "NewREX",
+    "SQ_L13926": "Spoon",
+    "SQ_L13927": "Spoon+D",
+    "SQ_L13928": "Queen",
+    "SQ_L13929": "TestECN",
+    "SQ_L13930": "NewSPA",
+    "SQ_L13931": "Sony's sample No.",
+    "SQ_L13932": "Marklot No",
+    "SQ_L13933": "ID",
+    "SQ_L13934": "WaferLot No",
+    "SQ_L13935": "Slice Number",
+    "SQ_L13936": "Assy Lot No",
+    "SQ_L13937": "Shipment date",
+
+    "SQ_L13938": "Close",
+
+    "SQ_L13939": "Quality Trouble(NewREX)",
+    "SQ_L13940": "Login",
+    "SQ_L13941": "Trouble Rank",
+    "SQ_L13942": "Trouble No",
+    "SQ_L13943": "Trouble Name",
+    "SQ_L13944": "Drafting date",
+
+
+    "SQ_L13945": "Directions No",
+    "SQ_L13946": "Subject",
+
+    "SQ_L13947": "TECN No",
+    "SQ_L13948": "Reason for Change",
+
+    "SQ_L13949": "Reliability(Queen)",
+    "SQ_L13950": "Evaluation No/QAT No",
+    "SQ_L13951": "Issue Date",
+
+    "SQ_L13952": "Special adoption",
+    "SQ_L13953": "Request No",
+    "SQ_L13954": "Back",
+    "SQ_L13955": "Forward",
+    "SQ_L13956": "Status",
+    "SQ_L13957": "Product name"
+
+  }
+}
