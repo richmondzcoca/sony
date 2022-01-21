@@ -32,7 +32,7 @@ export class WorkflowLsiComponent implements OnInit {
     currentRoute: string = '';
 
     returnedSamplesData: wjcCore.CollectionView | undefined;
-    workFlowData: wjcCore.CollectionView | [];
+    workFlowData: wjcCore.CollectionView | any;
 
     currentPage: number = 1;
     totalPages: number = 1;
@@ -55,15 +55,26 @@ export class WorkflowLsiComponent implements OnInit {
         this.href = this.router.url;
         this.currentRoute = this.href.split('/').pop();
 
-        this.workFlowData = new CollectionView([{
-          recordId: '0',
-          step: 'test',
-          name: 'test',
-          sectionName: 'test',
-          completionDate: 'test',
-          result: 'test',
-          comments: 'test'
-        }]);
+        this.workFlowData = new CollectionView([
+            {
+                recordId: '0',
+                step: 'test',
+                name: 'test',
+                sectionName: 'test',
+                completionDate: 'test',
+                result: 'test',
+                comments: 'test'
+            },
+            {
+                recordId: '1',
+                step: 'test2',
+                name: 'test2',
+                sectionName: 'test2',
+                completionDate: 'test2',
+                result: 'test2',
+                comments: 'test2'
+            }
+        ]);
     }
 
     deselectAllScope(): void {
@@ -75,18 +86,20 @@ export class WorkflowLsiComponent implements OnInit {
     }
 
     deleteIrsRecord(event, x : number): void {
-        console.log(event.currentTarget);
-        let currentElement = event.currentTarget
-      console.log('Selected record id: ', x )
+        console.log('Selected record id: ', x )
         this.dialogService
             .confirm('sqrm.SQ_L01020')
             .then((res: SweetAlertResult) => {
                 if (res.isConfirmed) {
-                    currentElement.closest('.wj-row').remove();
+                    // currentElement.closest('.wj-row').remove();
                   console.log('triggered...')
-                  this.returnedSamplesData.items.splice(x, 0);
-                  this.grid.itemsSource = this.returnedSamplesData.items
-                  this.grid.refresh()
+                  let newData = this.workFlowData.items.filter( data => data.recordId !== x );
+                  this.workFlowData = new CollectionView(newData);
+                  this.grid.itemsSource = this.workFlowData.items;
+
+                //   this.returnedSamplesData.items.splice(x, 0);
+                //   this.grid.itemsSource = this.returnedSamplesData.items
+                //   this.grid.refresh()
                 }
             
             });
