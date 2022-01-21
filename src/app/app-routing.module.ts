@@ -244,7 +244,7 @@ const routes: Routes = [
   },
   {
     path: 'initial-analysis',
-    loadChildren: () => import('./pages/initial-analysis_old/initial-analysis.module').then(m => m.InitialAnalysisModule),
+    loadChildren: () => import('./pages/initial-analysis/initial-analysis.module').then(m => m.InitialAnalysisModule),
     canActivate: [NgxPermissionsGuard],
     data: {
       permissions: {

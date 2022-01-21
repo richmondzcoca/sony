@@ -74,12 +74,15 @@ export class WorkflowLsiComponent implements OnInit {
         
     }
 
-    deleteIrsRecord(x : number): void {
+    deleteIrsRecord(event, x : number): void {
+        console.log(event.currentTarget);
+        let currentElement = event.currentTarget
       console.log('Selected record id: ', x )
         this.dialogService
             .confirm('sqrm.SQ_L01020')
             .then((res: SweetAlertResult) => {
                 if (res.isConfirmed) {
+                    currentElement.closest('.wj-row').remove();
                   console.log('triggered...')
                   this.returnedSamplesData.items.splice(x, 0);
                   this.grid.itemsSource = this.returnedSamplesData.items
@@ -87,6 +90,10 @@ export class WorkflowLsiComponent implements OnInit {
                 }
             
             });
+    }
+
+    showAttachedSub(){
+        alert();
     }
     
     exportInfoReturnedSamples() {

@@ -61,7 +61,7 @@
                 <wj-multi-row-cell [allowSorting]='false'
                     [align]="'center'" [width]="140">
                     <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
-                        <button class="btn btn-secondary" (click)="deleteIrsRecord(cell.item.recordId)">{{ 'sqrm.SQ_L01020' | translate }}</button>
+                        <button class="btn btn-secondary" (click)="deleteIrsRecord($event, cell.item.recordId)">{{ 'sqrm.SQ_L01020' | translate }}</button>
                     </ng-template>
                 </wj-multi-row-cell>
             </wj-multi-row-cell-group> 
