@@ -6,6 +6,7 @@ import * as wjcGrid from '@grapecity/wijmo.grid';
 import * as wjGrid from '@grapecity/wijmo.grid';
 import * as wjcXlsx from '@grapecity/wijmo.xlsx';
 import * as wjcGridXlsx from '@grapecity/wijmo.grid.xlsx';
+import * as XLSX from 'xlsx';
 
 import {  enableProdMode, NgModule, Inject } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -167,18 +168,27 @@ export class OutlineRequestLsiComponent implements OnInit {
     }
     
     exportInfoReturnedSamples() {
+        let today = new Date().toISOString().slice(0, 10)
+        let fileName = 'LSI_Outline_of_request_'+ today +'.xlsx'
+        const readyToExport = [
+           {
+               "Analysis request No.": document.querySelector('#analysisRequestNo').innerHTML,
+               "Required report date [Initial]": (document.querySelector('#reportDateInit input') as any).value,
+               "Required report date [Final]": (document.querySelector('#reportDateFinal input') as any).value,
+               "Business group name	": document.querySelector('#businessGroupName').innerHTML,
+               "PL category": document.querySelector('#plCategory').innerHTML,
+               "Outline of request": (document.querySelector('#outlineOfRequest') as any).value
+           }
+        ];
+
+        // return console.log(readyToExport);
+    
+        const workBook = XLSX.utils.book_new(); // create a new blank book
+        const workSheet = XLSX.utils.json_to_sheet(readyToExport);
+    
+        XLSX.utils.book_append_sheet(workBook, workSheet, 'data'); // add the worksheet to the book
+        XLSX.writeFile(workBook, fileName); // initiate a file download in browser
       console.log('triggered...')
-      let today = new Date().toISOString().slice(0, 10)
-      let fileName = 'LSI'+ today +'.xlsx'
-        wjcGridXlsx.FlexGridXlsxConverter.saveAsync(
-            this.flex,
-            {
-                includeColumnHeaders: this.includeColumnHeader,
-                includeCellStyles: false,
-                formatItem: this.customContent ? this._exportFormatItem : null,
-            },
-            fileName
-        );
     }
     
 
