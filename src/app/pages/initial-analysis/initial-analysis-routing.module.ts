@@ -29,6 +29,14 @@ const routes: Routes = [
     component: InitialAnalysisLsiRequestComponent
   }, 
   {
+    path: 'lsi-request/modify',
+    component: InitialAnalysisLsiRequestComponent
+  },
+  {
+    path: 'lsi-request/create',
+    component: InitialAnalysisLsiRequestComponent
+  }, 
+  {
     path: 'lsi-answer',
     component: InitialAnalysisLsiAnswerComponent
   }, 

@@ -15,6 +15,8 @@ import { MainScreenLinksComponent } from './common/main-screen-links/main-screen
 
 // Common Module
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { ModifyComponent } from './common/modify/modify.component';
+import { CreateComponent } from './common/create/create.component';
 
 // LSI Common Module
 import { OutlineRequestLsiComponent } from './common/outline-request/lsi/outline-request-lsi.component';
@@ -100,6 +102,8 @@ import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-
   declarations: [
     MainScreenLinksComponent,
     NavigationComponent,
+    ModifyComponent,
+    CreateComponent,
     OutlineRequestLsiComponent,
     InformationReturnedSamplesLsiComponent,
     AttachedFileLsiComponent,

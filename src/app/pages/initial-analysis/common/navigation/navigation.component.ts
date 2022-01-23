@@ -29,28 +29,33 @@ const TREE_DATA: SqrmNode[] = [
   {
     name: "K19-9008", 
     children: [
-      { name: "Modify attached files" , url: "/initial-analysis/is-request"},
+      // { name: "Modify attached files" , url: "/initial-analysis/is-request"},
+      { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
       { name: "Unknown", url: "/initial-analysis/is-request" },
       {
         name:"Initial analysis", 
         url: "/initial-analysis/is-request",
         children: [
-          { name: "Create new page" , url: "/initial-analysis/is-request"},
+          // { name: "Create new page" , url: "/initial-analysis/is-request"},
+          { name: "Create new page" , url: "/initial-analysis/lsi-request/create"},
           { name: "K19-9008-F01 Ver. 1", url:"/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              // { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
             ]
           },
           { name: "K19-9008-F01 Ver.2",
             url: "/initial-analysis/is-request",
             children:[
-              { name:"Modify attached files"}
+              // { name:"Modify attached files"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
             ]
           },
           { name: "K19-9008-F01 Ver.3",
             url: "/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              // { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
             ]
           }
         ]
@@ -59,23 +64,27 @@ const TREE_DATA: SqrmNode[] = [
         name: "Analysis and investigations",
         url: "/initial-analysis/is-request",
         children: [
-          { name: "Create new page", url: "/initial-analysis/is-request" },
+          // { name: "Create new page", url: "/initial-analysis/is-request" },
+          { name: "Create new page" , url: "/initial-analysis/lsi-request/create"},
           { name: "K19-9008-G01 Ver. 1",
             url: "/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files", url: "/initial-analysis/is-request" }
+              // { name: "Modify attached files", url: "/initial-analysis/is-request" }
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
             ]
           },
           { name: 'K19-9008-G01 Ver.2',
             url: '/initial-analysis/is-request',
             children:[
-              { name: 'Modify attached files'}
+              // { name: 'Modify attached files'}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
             ]
           },
           { name: 'K19-9008-G01 Ver.3',
             url: '/initial-analysis/is-request',
             children:[
-              { name: 'Modify attached files'}
+              // { name: 'Modify attached files'}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
             ]
           }
         ]
@@ -87,19 +96,22 @@ const TREE_DATA: SqrmNode[] = [
           { name: "K19-9008-H01 Ver.1 (Report date: 2019/11/27)",
             url: "/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              // { name: "Modify attached files", url: "/initial-analysis/is-request"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
             ]
           },
           { name: "K19-9008-H01 Ver.2 (Report date: 2019/11/29 Final)",
             url: "/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files"}
+              // { name: "Modify attached files"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
             ]
           },
           { name: "K19-9008-H01 Ver.3 (Report date: 2019/11/24)",
             url: "/initial-analysis/is-request",
             children:[
-              { name: "Modify attached files"}
+              // { name: "Modify attached files"}
+              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
             ]
           },
           { name:"History of report sending", url: "" }
@@ -111,7 +123,8 @@ const TREE_DATA: SqrmNode[] = [
         name: "Other relevalent documents",
         url:"",
         children:[
-          { name: "Modify attached files"}
+          // { name: "Modify attached files"}
+          { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
         ]
       },
       { name: "History", url:"" }
