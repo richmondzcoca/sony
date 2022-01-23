@@ -1,43 +1,43 @@
 <div class="sub-screen" *ngIf="currentRoute.includes('is-')">
   <div class="sub-screen-title">
-    <p>{{ 'sqrm.SQ_L010012' | translate }}</p>
+    <p>{{ 'sqrm.SQ_L10012' | translate }}</p>
   </div>
   <div class="sub-screen-container">
     <wj-multi-row #returnedSamplesGrid [headersVisibility]="'Column'" [selectionMode]="'None'"
       [itemsSource]="returnedSamplesData">
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="ver" header="{{'sqrm.SQ_L010147' | translate}}" [minWidth]="143" [width]="'*'" [align]="'center'">
+        <wj-multi-row-cell binding="ver" header="{{'sqrm.SQ_L10147' | translate}}" [minWidth]="143" [width]="'*'" [align]="'center'">
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="reportNo" header="{{ 'sqrm.SQ_L010148' | translate }}" [minWidth]="143" 
+        <wj-multi-row-cell binding="reportNo" header="{{ 'sqrm.SQ_L10148' | translate }}" [minWidth]="143" 
           [width]="'*'" [align]="'center'"></wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="reportDate" header="{{ 'sqrm.SQ_L010149' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="reportDate" header="{{ 'sqrm.SQ_L10149' | translate }}" [minWidth]="143"
           [width]="'*'" [align]="'center'"></wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="nextReportDate" header="{{ 'sqrm.SQ_L010150' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="nextReportDate" header="{{ 'sqrm.SQ_L10150' | translate }}" [minWidth]="143"
           [width]="'*'" [align]="'center'"></wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="final" header="{{ 'sqrm.SQ_L010151' | translate }}" [minWidth]="143" [width]="'*'" [align]="'center'">
+        <wj-multi-row-cell binding="final" header="{{ 'sqrm.SQ_L10151' | translate }}" [minWidth]="143" [width]="'*'" [align]="'center'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
             <input type="checkbox" value="final" [disabled]="currentRoute === 'is-approval'"/>
           </ng-template>
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="reportTemplate" header="{{ 'sqrm.SQ_L010152' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="reportTemplate" header="{{ 'sqrm.SQ_L10152' | translate }}" [minWidth]="143"
           [width]="'*'" [align]="'center'"></wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="originalReport" header="{{ 'sqrm.SQ_L010153' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="originalReport" header="{{ 'sqrm.SQ_L10153' | translate }}" [minWidth]="143"
           [width]="'*'" [align]="'center'"></wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="pdfCheck" header="{{ 'sqrm.SQ_L010154' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="pdfCheck" header="{{ 'sqrm.SQ_L10154' | translate }}" [minWidth]="143"
           [width]="'*'" [align]="'center'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" align="center" let-item="item">
             <button class="btn btn-secondary" (click)="viewPDF()"> Check report </button>
@@ -45,7 +45,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="reportCheck" header="{{ 'sqrm.SQ_L010155' | translate }}" [minWidth]="143"
+        <wj-multi-row-cell binding="reportCheck" header="{{ 'sqrm.SQ_L10155' | translate }}" [minWidth]="143"
           [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
             <input type="checkbox" />

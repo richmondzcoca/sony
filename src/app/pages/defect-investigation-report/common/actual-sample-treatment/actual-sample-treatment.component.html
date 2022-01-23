@@ -1,18 +1,18 @@
 <div class="sub-screen-divided" *ngIf="currentRoute.includes('is-')">
     <div class="sub-screen" [ngStyle]="{ 'width': '55%' }">
         <div class="sub-screen-title">
-            <p>{{ "sqrm.SQ_L010007" | translate }}</p>
+            <p>{{ "sqrm.SQ_L10007" | translate }}</p>
             <div class="actions">
                 <div class="checkbox-input">
                     <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'is-approval'"/>
-                    <label for="checkbox_1">{{ "sqrm.SQ_L010142" | translate }}</label>
+                    <label for="checkbox_1">{{ "sqrm.SQ_L10142" | translate }}</label>
                 </div>
             </div>
         </div>
         <div class="sub-screen-container">
-            <wj-multi-row  [headersVisibility]="'Column'" [selectionMode]="'None'" [itemsSource]="testData">
+            <wj-multi-row [headersVisibility]="'Column'" [selectionMode]="'None'" [itemsSource]="testData">
                 <wj-multi-row-cell-group>
-                    <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L010099' | translate" [minWidth]="100"
+                    <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10099' | translate" [minWidth]="100"
                         [width]="'*'">
                         <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'" >
                             <input type="text" class="full-width right-align" />
@@ -21,7 +21,7 @@
                 </wj-multi-row-cell-group>
 
                 <wj-multi-row-cell-group>
-                    <wj-multi-row-cell [header]="'sqrm.SQ_L010100' | translate" [minWidth]="100" [width]="'*'" >
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10100' | translate" [minWidth]="100" [width]="'*'" >
                         <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
                             <input type="text" class="full-width right-align" />
                         </ng-template>
@@ -29,7 +29,7 @@
                 </wj-multi-row-cell-group>
 
                 <wj-multi-row-cell-group>
-                    <wj-multi-row-cell [header]="'sqrm.SQ_L010101' | translate" [minWidth]="100" [width]="'*'" >
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10101' | translate" [minWidth]="100" [width]="'*'" >
                         <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
                             <input type="text" class="full-width right-align" />
                         </ng-template>
@@ -37,7 +37,7 @@
                 </wj-multi-row-cell-group>
 
                 <wj-multi-row-cell-group>
-                    <wj-multi-row-cell [header]="'sqrm.SQ_L010102' | translate" [minWidth]="100" [width]="'*'" >
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10102' | translate" [minWidth]="100" [width]="'*'" >
                         <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
                             <input type="text" class="full-width right-align" />
                         </ng-template>
@@ -45,7 +45,7 @@
                 </wj-multi-row-cell-group>
 
                 <wj-multi-row-cell-group>
-                    <wj-multi-row-cell [header]="'sqrm.SQ_L010103' | translate" [minWidth]="100" [width]="'*'">
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10103' | translate" [minWidth]="100" [width]="'*'">
                     </wj-multi-row-cell>
                 </wj-multi-row-cell-group>
             </wj-multi-row>
@@ -55,8 +55,8 @@
     <div class="sub-screen" [ngStyle]="{ 'width': '45%' }">
         <div class="sub-screen-title">
             <div class="header-title">
-                <span>{{ "sqrm.SQ_L010104" | translate }}</span>
-                <span *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L010105" | translate }}</span>
+                <span>{{ "sqrm.SQ_L10104" | translate }}</span>
+                <span *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L10105" | translate }}</span>
             </div>
         </div>
         <div class="sub-screen-container">

@@ -1,12 +1,12 @@
 <div class="sub-screen" *ngIf="currentRoute.includes('is-')">
   <div class="sub-screen-title">
     <div class="header-title">
-      <span>{{ "sqrm.SQ_L010010" | translate }}</span>
+      <span>{{ "sqrm.SQ_L10010" | translate }}</span>
     </div>
     <div class="actions" *ngIf="currentRoute ==='is-creation'">
-      <button class="btn btn-secondary" >{{ 'sqrm.SQ_L010116' | translate }}</button>
-      <button class="btn btn-secondary" disabled="{'disabled': currentRoute === 'is-creation'}">{{ 'sqrm.SQ_L010117' | translate }}</button>
-      <button class="btn btn-secondary" disabled="{'disabled': currentRoute === 'is-creation'}">{{ 'sqrm.SQ_L010118' | translate }}</button>
+      <button class="btn btn-secondary" (click)="showSelectDestinationDialog()">{{ 'sqrm.SQ_L10116' | translate }}</button>
+      <button class="btn btn-secondary" disabled="{'disabled': currentRoute === 'is-creation'}">{{ 'sqrm.SQ_L10117' | translate }}</button>
+      <button class="btn btn-secondary" disabled="{'disabled': currentRoute === 'is-creation'}">{{ 'sqrm.SQ_L10118' | translate }}</button>
     </div>
   </div>
   <div class="sub-screen-container">
@@ -18,7 +18,7 @@
   <div class="sub-screen-title"> 
     <p>{{ "sqrm.SQ_L16074" | translate }}</p>
     <div class="actions" *ngIf="currentRoute === 'mdd-creation'">
-      <button class="btn btn-secondary">{{ "sqrm.SQ_L16075" | translate }}</button>
+      <button class="btn btn-secondary" (click)="showSelectDestinationDialog()">{{ "sqrm.SQ_L16075" | translate }}</button>
       <button class="btn btn-secondary btn-fw">{{ "sqrm.SQ_L16076" | translate }}</button>
       <button class="btn btn-secondary btn-fw">{{ "sqrm.SQ_L16077" | translate }}</button>
     </div>
@@ -32,7 +32,7 @@
   <div class="sub-screen-title"> 
     <p>{{ "sqrm.SQ_L04090" | translate }}</p>
     <div class="actions" *ngIf="currentRoute === 'lsi-creation'">
-      <button class="btn btn-secondary">{{ "sqrm.SQ_L04091" | translate }}</button>
+      <button class="btn btn-secondary" (click)="showSelectDestinationDialog()">{{ "sqrm.SQ_L04091" | translate }}</button>
       <button class="btn btn-secondary btn-fw">{{ "sqrm.SQ_L04092" | translate }}</button>
       <button class="btn btn-secondary btn-fw">{{ "sqrm.SQ_L04093" | translate }}</button>
     </div>

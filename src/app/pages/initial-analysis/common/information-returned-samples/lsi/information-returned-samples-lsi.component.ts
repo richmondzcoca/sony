@@ -32,6 +32,7 @@ export class InformationReturnedSamplesLsiComponent implements OnInit {
     currentRoute: string = '';
 
     returnedSamplesData: wjcCore.CollectionView | undefined;
+    returnedSamplesData2: wjcCore.CollectionView | undefined;
 
     currentPage: number = 1;
     totalPages: number = 1;
@@ -42,6 +43,8 @@ export class InformationReturnedSamplesLsiComponent implements OnInit {
     includeColumnHeader = true;
     customContent = false;
     @ViewChild('flex', { static: true }) flex: wjcGrid.FlexGrid;
+    irsModeStatus: any ="Module Soc"
+    irsMode : any = ['PKG Soc', 'Module Soc'];
 
     x : string
     constructor(
@@ -75,6 +78,94 @@ export class InformationReturnedSamplesLsiComponent implements OnInit {
                 symptomConfirmedbySony: 'test1',
                 judgement: 'test1',
                 detailsOfRequest: 'test1',
+            },
+            {
+                recordId: '1',
+                scope: true,
+                receptionNo: 'test2',
+                receptionDate: 'test2',
+                customerName: 'test2',
+                productName: 'test2',
+                customerSampleNo: 'test2',
+                sonySampleNo: 'test2',
+                markLotNo: 'test2',
+                id: 'test2',
+                dateOfFailureOccurence: 'test2',
+                regionOfFailure: 'test2',
+                processOfFailure: 'test2',
+                detailProcessOfFailure: 'test2',
+                failureMode: 'test2',
+                detailsOfFailureMode: 'test2',
+                symptomConfirmedbySony: 'test2',
+                judgement: 'test2',
+                detailsOfRequest: 'test2',
+            },
+            {
+              recordId: '2',
+              scope: true,
+              receptionNo: 'test3',
+              receptionDate: 'test3',
+              customerName: 'test3',
+              productName: 'test3',
+              customerSampleNo: 'test3',
+              sonySampleNo: 'test3',
+              markLotNo: 'test3',
+              id: 'test3',
+              dateOfFailureOccurence: 'test3',
+              regionOfFailure: 'test3',
+              processOfFailure: 'test3',
+              detailProcessOfFailure: 'test3',
+              failureMode: 'test3',
+              detailsOfFailureMode: 'test3',
+              symptomConfirmedbySony: 'test3',
+              judgement: 'test3',
+              detailsOfRequest: 'test3',
+          },
+          {
+            recordId: '3',
+            scope: true,
+            receptionNo: 'test4',
+            receptionDate: 'test4',
+            customerName: 'test4',
+            productName: 'test4',
+            customerSampleNo: 'test4',
+            sonySampleNo: 'test4',
+            markLotNo: 'test4',
+            id: 'test4',
+            dateOfFailureOccurence: 'test4',
+            regionOfFailure: 'test4',
+            processOfFailure: 'test4',
+            detailProcessOfFailure: 'test4',
+            failureMode: 'test4',
+            detailsOfFailureMode: 'test4',
+            symptomConfirmedbySony: 'test4',
+            judgement: 'test4',
+            detailsOfRequest: 'test4',
+        },
+        
+        ], { pageSize: 3});
+
+        this.returnedSamplesData2 = new CollectionView([
+            {
+                recordId: '0',
+                scope: true,
+                receptionNo: 'test123',
+                receptionDate: 'test123',
+                customerName: 'test123',
+                productName: 'test123',
+                customerSampleNo: 'test123',
+                sonySampleNo: 'test123',
+                markLotNo: 'test123',
+                id: 'test123',
+                dateOfFailureOccurence: 'test123',
+                regionOfFailure: 'test123',
+                processOfFailure: 'test123',
+                detailProcessOfFailure: 'test123',
+                failureMode: 'test123',
+                detailsOfFailureMode: 'test123',
+                symptomConfirmedbySony: 'test123',
+                judgement: 'test123',
+                detailsOfRequest: 'test123',
             },
             {
                 recordId: '1',

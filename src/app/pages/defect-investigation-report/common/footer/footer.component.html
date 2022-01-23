@@ -1,10 +1,10 @@
 <div class="footer-btn" *ngIf="currentRoute.includes('is-')" [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw" disabled="{'disabled': currentRoute === 'is-creation'}"
+    *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L10130" | translate }}</button>
   <button class="btn btn-primary" disabled="{'disabled': currentRoute === 'is-creation'}"
-    *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L010130" | translate }}</button>
-  <button class="btn btn-primary" disabled="{'disabled': currentRoute === 'is-creation'}"
-    *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L010156" | translate }}</button>
-  <button class="btn btn-primary" *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L010157" | translate }}</button>
-  <button class="btn btn-primary">{{ "sqrm.SQ_L010131" | translate }}</button>
+    *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L10156" | translate }}</button>
+  <button class="btn btn-primary btn-fw" *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L10157" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L10131" | translate }}</button>
 </div>
 
 <!-- MDD Creation -->

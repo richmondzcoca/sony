@@ -9,6 +9,7 @@ import { CollectionView } from '@grapecity/wijmo';
 // For Dialog
 import { MatDialog } from '@angular/material/dialog';
 import { AttachedSubComponent } from '../attached-sub/attached-sub.component';
+import { SelectUserComponent } from 'src/app/shared/select-user/select-user.component';
 
 @Component({
   selector: 'app-workflow',
@@ -25,6 +26,11 @@ export class WorkflowComponent implements OnInit {
     'Option 1', 
     'Option 2'
   ];
+
+  dropDownData1 = [
+    'Factory Business System Management Section'
+  ]
+  
 
   constructor(
     private router: Router,
@@ -46,7 +52,14 @@ export class WorkflowComponent implements OnInit {
       },
     ]);
   }
+
   showAttachedSub() {
     const popup = this.dialog.open(AttachedSubComponent).componentInstance;
+  }
+
+  showSelectApproverDialog() {
+    const popup = this.dialog.open(SelectUserComponent).componentInstance;
+    // popup.dialogType = 'approver';
+    // popup.selectedApprover.subscribe((e) => console.log(e));
   }
 }

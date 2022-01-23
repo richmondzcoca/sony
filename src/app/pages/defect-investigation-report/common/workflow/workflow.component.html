@@ -1,78 +1,78 @@
 <div class="sub-screen" *ngIf="currentRoute.includes('is-')">
-      <div class="sub-screen-title">
-        <div>
-            <span>{{ "sqrm.SQ_L010008" | translate }}</span>
-        </div>
-
-        <div>
-          <label>
-            <input type="checkbox" name="checkbox" [disabled]="currentRoute === 'is-approval'">
-              {{ "sqrm.SQ_L010107" | translate }}
-            </label>
-            <button class="btn btn-secondary" *ngIf="currentRoute ==='is-creation'" (click)="showAttachedSub()">{{ "sqrm.SQ_L010108" | translate }}</button>
-        </div>
-    </div>
+  <div class="sub-screen-title">
     <div>
-        <span style="color:red;font-weight:bold">{{ "sqrm.SQ_L010144" | translate }}</span>
+      <span>{{ "sqrm.SQ_L10008" | translate }}</span>
     </div>
-    <div class="sub-screen-container">
-        <wj-multi-row class="girdlist " #multirow [itemsSource]="workFlowData" [headersVisibility]="'Column'"
-            [isReadOnly]="false" [selectionMode]="'Cell'" [allowDelete]="true" [allowMerging]="true">
 
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='step' header="{{ 'sqrm.SQ_L010109' | translate }}" [allowSorting]='false'
-                    [align]="'left'" [minWidth]="80" [width]="100">
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='name' header="{{ 'sqrm.SQ_L010110' | translate }}" [allowSorting]='false'
-                    [align]="'left'" [minWidth]="200" [width]="150">
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='sectionName' header="{{ 'sqrm.SQ_L010111' | translate }}"
-                    [allowSorting]='false' [align]="'left'" [minWidth]="400" [width]="'*'">
-                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
-                       <select>
-                           <option>Factory Business System Management Section</option>
-                       </select>
-                    </ng-template>
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='completionDate' header="{{ 'sqrm.SQ_L010112' | translate }}"
-                    [allowSorting]='false'[minWidth]="150" [width]="150"[align]="'left'">
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='result' header="{{ 'sqrm.SQ_L010113' | translate }}" [allowSorting]='false'
-                    [align]="'left'" [minWidth]="80" [width]="80">
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='comments' header="{{ 'sqrm.SQ_L010114' | translate }}" [allowSorting]='false'
-                    [align]="'left'" [minWidth]="200" [width]="'*'">
-                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
-                       <input type="text " />
-                     </ng-template>
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-
-            <wj-multi-row-cell-group>
-                <wj-multi-row-cell binding='saveDt' header="{{ 'sqrm.SQ_L010115' | translate }}" [allowSorting]='false'
-                    [align]="'center'" [minWidth]="100" [width]="100" *ngIf="currentRoute==='is-creation'">
-                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
-                        <button class="btn btn-secondary" >{{ 'sqrm.SQ_L010115' | translate }}</button>
-                    </ng-template>
-                </wj-multi-row-cell>
-            </wj-multi-row-cell-group>
-        </wj-multi-row>
+    <div>
+      <label>
+        <input type="checkbox" name="checkbox" [disabled]="currentRoute === 'is-approval'">
+        {{ "sqrm.SQ_L10107" | translate }}
+      </label>
+      <button class="btn btn-secondary" *ngIf="currentRoute ==='is-creation'" (click)="showSelectApproverDialog()">
+        {{ "sqrm.SQ_L10108" | translate }}
+      </button>
     </div>
+  </div>
+  <div>
+    <span style="color:red;font-weight:bold">{{ "sqrm.SQ_L10144" | translate }}</span>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row class="girdlist " #multirow [itemsSource]="workFlowData" [headersVisibility]="'Column'"
+      [isReadOnly]="false" [selectionMode]="'Cell'" [allowDelete]="true" [allowMerging]="true">
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='step' header="{{ 'sqrm.SQ_L10109' | translate }}" [allowSorting]='false'
+          [align]="'left'" [minWidth]="80" [width]="100">
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='name' header="{{ 'sqrm.SQ_L10110' | translate }}" [allowSorting]='false'
+          [align]="'left'" [minWidth]="200" [width]="150">
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='sectionName' header="{{ 'sqrm.SQ_L10111' | translate }}" [allowSorting]='false'
+          [align]="'left'" [minWidth]="400" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <wj-combo-box [itemsSource]="dropDownData1" [isDroppedDown]="false" [isAnimated]="true"></wj-combo-box>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='completionDate' header="{{ 'sqrm.SQ_L10112' | translate }}" [allowSorting]='false'
+          [minWidth]="150" [width]="150" [align]="'left'">
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='result' header="{{ 'sqrm.SQ_L10113' | translate }}" [allowSorting]='false'
+          [align]="'left'" [minWidth]="80" [width]="80">
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='comments' header="{{ 'sqrm.SQ_L10114' | translate }}" [allowSorting]='false'
+          [align]="'left'" [minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <input type="text " />
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding='saveDt' header="{{ 'sqrm.SQ_L10115' | translate }}" [allowSorting]='false'
+          [align]="'center'" [minWidth]="100" [width]="100" *ngIf="currentRoute==='is-creation'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <button class="btn btn-secondary">{{ 'sqrm.SQ_L10115' | translate }}</button>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    </wj-multi-row>
+  </div>
 </div>
 
 <!-- MDD -->
@@ -84,7 +84,7 @@
         <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'mdd-approval'" />
         <label for="checkbox_1">{{ "sqrm.SQ_L16064" | translate }}</label>
       </div>
-      <button class="btn btn-secondary btn-fw" *ngIf="currentRoute === 'mdd-creation'">{{ "sqrm.SQ_L16065" | translate }}</button>
+      <button class="btn btn-secondary btn-fw" *ngIf="currentRoute === 'mdd-creation'" (click)="showSelectApproverDialog()">{{ "sqrm.SQ_L16065" | translate }}</button>
     </div>
   </div>
   <div class="sub-screen-container">
@@ -132,7 +132,7 @@
         <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'lsi-approval'" />
         <label for="checkbox_1">{{ "sqrm.SQ_L04080" | translate }}</label>
       </div>
-      <button class="btn btn-secondary btn-fw" *ngIf="currentRoute === 'lsi-creation'">{{ "sqrm.SQ_L04081" | translate }}</button>
+      <button class="btn btn-secondary btn-fw" *ngIf="currentRoute === 'lsi-creation'" (click)="showSelectApproverDialog()">{{ "sqrm.SQ_L04081" | translate }}</button>
     </div>
   </div>
   <div class="sub-screen-container">

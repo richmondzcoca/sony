@@ -1,7 +1,7 @@
 <div class="sub-screen" *ngIf="currentRoute.includes('is-')">
   <div class="sub-screen-title">
     <p>Reported sample treatment</p>
-    <a href="#" *ngIf="currentRoute ==='is-approval'">{{ 'sqrm.SQ_L010145' | translate }}</a>
+    <a href="#" *ngIf="currentRoute ==='is-approval'">{{ 'sqrm.SQ_L10145' | translate }}</a>
   </div>
   <div class="sub-screen-container">
     <wj-multi-row #returnedSamplesGrid
@@ -9,7 +9,7 @@
       [selectionMode]="'None'"
       [itemsSource]="returnedSamplesData">
       <wj-multi-row-cell-group header="sonyResponsibility" >
-        <wj-multi-row-cell binding="sonyResponsibility" header="{{'sqrm.SQ_L010024' | translate}}"[minWidth]="200" [width]="'*'">
+        <wj-multi-row-cell binding="sonyResponsibility" header="{{'sqrm.SQ_L10024' | translate}}"[minWidth]="200" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
@@ -19,7 +19,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="custResponsility" header="{{ 'sqrm.SQ_L010025' | translate }}" [minWidth]="200" [width]="'*'">
+        <wj-multi-row-cell binding="custResponsility" header="{{ 'sqrm.SQ_L10025' | translate }}" [minWidth]="200" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
@@ -29,7 +29,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="goodSample" header="{{ 'sqrm.SQ_L010026' | translate }}" [minWidth]="200" [width]="'*'">
+        <wj-multi-row-cell binding="goodSample" header="{{ 'sqrm.SQ_L10026' | translate }}" [minWidth]="200" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
@@ -39,7 +39,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="others" header="{{ 'sqrm.SQ_L010027' | translate }}" [minWidth]="200" [width]="'*'">
+        <wj-multi-row-cell binding="others" header="{{ 'sqrm.SQ_L10027' | translate }}" [minWidth]="200" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
@@ -49,7 +49,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="underAnalysis" header="{{ 'sqrm.SQ_L010028' | translate }}" [minWidth]="200" [width]="'*'">
+        <wj-multi-row-cell binding="underAnalysis" header="{{ 'sqrm.SQ_L10028' | translate }}" [minWidth]="200" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
@@ -59,7 +59,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="total" header="{{ 'sqrm.SQ_L010029' | translate }}" [minWidth]="143" [width]="'*'">
+        <wj-multi-row-cell binding="total" header="{{ 'sqrm.SQ_L10029' | translate }}" [minWidth]="143" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <span class="align-right">{{cell.item.sonyResponsibility}}</span>
@@ -68,7 +68,7 @@
         </wj-multi-row-cell>
       </wj-multi-row-cell-group>
       <wj-multi-row-cell-group>
-        <wj-multi-row-cell binding="analyzedQuantity" header="{{ 'sqrm.SQ_L010030' | translate }}" [minWidth]="143" [width]="'*'">
+        <wj-multi-row-cell binding="analyzedQuantity" header="{{ 'sqrm.SQ_L10030' | translate }}" [minWidth]="143" [width]="'*'">
           <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
             <div style="text-align:right">
               <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
