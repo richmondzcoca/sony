@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NavigationComponent } from '../../common/navigation/navigation.component';
+import { NavigationComponent } from 'src/app/shared/navigation/navigation.component'; 
 import { ModifyComponent } from '../../common/modify/modify.component';
 import { CreateComponent } from '../../common/create/create.component';
 import { Router } from '@angular/router';
