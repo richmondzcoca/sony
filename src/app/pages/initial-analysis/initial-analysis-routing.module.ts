@@ -2,22 +2,21 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxPermissionsGuard } from 'ngx-permissions';
 
-// LSI 
-import { InitialAnalysisLsiRequestComponent } from './lsi/request/initial-analysis-lsi-request.component';
+import { InitialAnalysisRequestComponent } from './index/initial-analysis.component';
 
 const routes: Routes = [
   {
-    path: 'lsi-request',
-    component: InitialAnalysisLsiRequestComponent
+    path: '',
+    component: InitialAnalysisRequestComponent
   }, 
   {
-    path: 'lsi-request/modify',
-    component: InitialAnalysisLsiRequestComponent
+    path: 'modify',
+    component: InitialAnalysisRequestComponent
   },
   {
-    path: 'lsi-request/create',
-    component: InitialAnalysisLsiRequestComponent
-  },
+    path: 'create',
+    component: InitialAnalysisRequestComponent
+  }
 ];
 
 @NgModule({

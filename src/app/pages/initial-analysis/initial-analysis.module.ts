@@ -11,8 +11,6 @@ import { InitialAnalysisRoutingModule } from './initial-analysis-routing.module'
 
 // Services
 
-import { MainScreenLinksComponent } from './common/main-screen-links/main-screen-links.component';
-
 // Common Module
 import { NavigationComponent } from '../../shared/navigation/navigation.component';
 import { ModifyComponent } from './common/modify/modify.component';
@@ -20,7 +18,7 @@ import { CreateComponent } from './common/create/create.component';
 
 // LSI Common Module
 import { OutlineRequestLsiComponent } from './common/outline-request/lsi/outline-request-lsi.component';
-import { InformationReturnedSamplesLsiComponent } from './common/information-returned-samples/lsi/information-returned-samples-lsi.component';
+import { InformationReturnedSamplesComponent } from './common/information-returned-samples/information-returned-samples.component';
 import { AttachedFileLsiComponent } from './common/attached-file/lsi/attached-file-lsi.component';
 import { RemarksLsiComponent } from './common/remarks/lsi/remarks-lsi.component';
 import { WorkflowLsiComponent } from './common/workflow/lsi/workflow-lsi.component';
@@ -31,7 +29,7 @@ import { EmailDestinationAnalysisLsiComponent } from './common/email-destination
 import { FooterLsiComponent } from './common/footer/lsi/footer-lsi.component';
 
 // LSI
-import { InitialAnalysisLsiRequestComponent } from './lsi/request/initial-analysis-lsi-request.component';
+import { InitialAnalysisRequestComponent } from './index/initial-analysis.component';
 import { WjGridMultirowModule } from '@grapecity/wijmo.angular2.grid.multirow';
 
 import { InitialAnalysisFinalReportComponent } from './common/final-report/final-report.component';
@@ -48,12 +46,11 @@ import { InitialAnalysisFinalReportComponent } from './common/final-report/final
     MatButtonModule,
   ],
   declarations: [
-    MainScreenLinksComponent,
     NavigationComponent,
     ModifyComponent,
     CreateComponent,
     OutlineRequestLsiComponent,
-    InformationReturnedSamplesLsiComponent,
+    InformationReturnedSamplesComponent,
     AttachedFileLsiComponent,
     RemarksLsiComponent,
     WorkflowLsiComponent,
@@ -63,13 +60,13 @@ import { InitialAnalysisFinalReportComponent } from './common/final-report/final
     EmailDestinationAnalysisLsiComponent,
     FooterLsiComponent,
 
-    InitialAnalysisLsiRequestComponent,
+    InitialAnalysisRequestComponent,
     InitialAnalysisFinalReportComponent,
   ],
   
   exports: [
     OutlineRequestLsiComponent,
-    InformationReturnedSamplesLsiComponent,
+    InformationReturnedSamplesComponent,
     AttachedFileLsiComponent,
     RemarksLsiComponent,
     WorkflowLsiComponent,

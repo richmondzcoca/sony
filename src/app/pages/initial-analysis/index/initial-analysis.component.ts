@@ -1,28 +1,26 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NavigationComponent } from 'src/app/shared/navigation/navigation.component'; 
-import { ModifyComponent } from '../../common/modify/modify.component';
-import { CreateComponent } from '../../common/create/create.component';
+import { ModifyComponent } from '../common/modify/modify.component';
+import { CreateComponent } from '../common/create/create.component';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-initial-analysis-lsi-request',
-    templateUrl: './initial-analysis-lsi-request.component.html',
-    styleUrls: ['./initial-analysis-lsi-request.component.less'],
+    selector: 'app-initial-analysis',
+    templateUrl: './initial-analysis.component.html',
+    styleUrls: ['./initial-analysis.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InitialAnalysisLsiRequestComponent implements OnInit {
+export class InitialAnalysisRequestComponent implements OnInit {
 
     constructor(private dialog: MatDialog, private router: Router) { }
   
     ngOnInit(): void {
-        console.log("this.router.url: ",this.router.url);
-        // console.log(window.location.pathname)
-        if(this.router.url === "/initial-analysis/lsi-request/modify"){
+        if(this.router.url === "/initial-analysis/request/modify"){
             this.showModifyDialog();
         }
 
-        if(this.router.url === "/initial-analysis/lsi-request/create"){
+        if(this.router.url === "/initial-analysis/request/create"){
             this.showCreateDialog();
         }
     }

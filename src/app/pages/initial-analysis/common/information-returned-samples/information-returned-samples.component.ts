@@ -21,12 +21,12 @@ import { SweetAlertResult } from 'sweetalert2';
 // import { DataService } from './information-returned-samples-lsi.component';
 
 @Component({
-  selector: 'app-information-returned-samples-lsi',
-  templateUrl: './information-returned-samples-lsi.component.html',
-  styleUrls: ['./information-returned-samples-lsi.component.less'],
+  selector: 'app-information-returned-samples',
+  templateUrl: 'information-returned-samples.component.html',
+  styleUrls: ['information-returned-samples.component.less'],
   changeDetection: ChangeDetectionStrategy.Default,
 })
-export class InformationReturnedSamplesLsiComponent implements OnInit {
+export class InformationReturnedSamplesComponent implements OnInit {
     @ViewChild('returnedSamplesGrid', { static: true }) grid: wjGrid.FlexGrid;
     href: string = '';
     currentRoute: string = '';
@@ -43,8 +43,8 @@ export class InformationReturnedSamplesLsiComponent implements OnInit {
     includeColumnHeader = true;
     customContent = false;
     @ViewChild('flex', { static: true }) flex: wjcGrid.FlexGrid;
-    irsModeStatus: any ="Module Soc"
-    irsMode : any = ['PKG Soc', 'Module Soc'];
+    irsModeStatus: any ="LSI Request"
+    irsMode : any = ['LSI Request', 'LSI Answer', 'LSI Approval'];
 
     x : string
     constructor(
