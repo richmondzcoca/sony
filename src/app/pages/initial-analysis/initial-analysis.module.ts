@@ -36,16 +36,10 @@ import { InitialAnalysisLsiAnswerComponent } from './lsi/answer/initial-analysis
 import { InitialAnalysisLsiApprovalComponent } from './lsi/approval/initial-analysis-lsi-approval.component';
 import { WjGridMultirowModule } from '@grapecity/wijmo.angular2.grid.multirow';
 
-// IS Common Module
-import { WorkflowIsComponent } from './common/workflow/is/workflow-is.component';
-
 // IS
 import { InitialAnalysisIsRequestComponent } from './is/request/initial-analysis-is-request.component';
 import { InitialAnalysisIsAnswerComponent } from './is/answer/initial-analysis-is-answer.component';
 import { InitialAnalysisIsApprovalComponent } from './is/approval/initial-analysis-is-approval.component';
-
-// MDD Common Module
-import { WorkflowMddComponent } from './common/workflow/mdd/workflow-mdd.component';
 
 // MDD SubScreens
 import { InitialAnalysisMddRequestComponent } from './mdd/request/initial-analysis-mdd-request.component';
@@ -53,7 +47,6 @@ import { InitialAnalysisMddAnswerComponent } from './mdd/answer/initial-analysis
 import { InitialAnalysisMddApprovalComponent } from './mdd/approval/initial-analysis-mdd-approval.component';
 
 // Laser Common Module
-import { WorkflowLaserComponent } from './common/workflow/laser/workflow-laser.component';
 import { InitialAnalysisFinalReportComponent } from './common/final-report/final-report.component';
 
 // Laser subscreens
@@ -92,17 +85,14 @@ import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-
     InitialAnalysisLsiAnswerComponent,
     InitialAnalysisLsiApprovalComponent,
 
-    WorkflowIsComponent,
     InitialAnalysisIsRequestComponent,
     InitialAnalysisIsAnswerComponent,
     InitialAnalysisIsApprovalComponent,
     
-    WorkflowMddComponent,
     InitialAnalysisMddRequestComponent,
     InitialAnalysisMddAnswerComponent,
     InitialAnalysisMddApprovalComponent,
 
-    WorkflowLaserComponent,
     InitialAnalysisFinalReportComponent,
 
     InitialAnalysisLaserRequestComponent,
@@ -123,11 +113,8 @@ import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-
     FooterComponent,
 
     
-    WorkflowIsComponent,
     
-    WorkflowMddComponent,
     
-    WorkflowLaserComponent,
   ], 
 
   providers: [ 
