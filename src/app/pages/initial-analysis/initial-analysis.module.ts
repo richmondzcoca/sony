@@ -11,28 +11,55 @@ import { InitialAnalysisRoutingModule } from './initial-analysis-routing.module'
 
 // Services
 
+import { MainScreenLinksComponent } from './common/main-screen-links/main-screen-links.component';
+
 // Common Module
 import { NavigationComponent } from '../../shared/navigation/navigation.component';
 import { ModifyComponent } from './common/modify/modify.component';
 import { CreateComponent } from './common/create/create.component';
 
 // LSI Common Module
-import { OutlineRequestLsiComponent } from './common/outline-request/lsi/outline-request-lsi.component';
+import { OutlineRequestComponent } from './common/outline-request/outline-request.component';
 import { InformationReturnedSamplesComponent } from './common/information-returned-samples/information-returned-samples.component';
-import { AttachedFileLsiComponent } from './common/attached-file/lsi/attached-file-lsi.component';
-import { RemarksLsiComponent } from './common/remarks/lsi/remarks-lsi.component';
-import { WorkflowLsiComponent } from './common/workflow/lsi/workflow-lsi.component';
-import { SelectDestinationRequestLsiComponent } from './common/select-destination-request/lsi/select-destination-request-lsi.component';
-import { EmailDestinationRequestLsiComponent } from './common/email-destination-request/lsi/email-destination-request-lsi.component';
-import { SelectDestinationAnalysisLsiComponent } from './common/select-destination-analysis/lsi/select-destination-analysis-lsi.component';
-import { EmailDestinationAnalysisLsiComponent } from './common/email-destination-analysis/lsi/email-destination-analysis-lsi.component';
-import { FooterLsiComponent } from './common/footer/lsi/footer-lsi.component';
+import { AttachedFileComponent } from './common/attached-file/attached-file.component';
+import { RemarksComponent } from './common/remarks/remarks.component';
+import { WorkflowComponent } from './common/workflow/workflow.component';
+import { SelectDestinationRequestComponent } from './common/select-destination-request/select-destination-request.component';
+import { EmailDestinationRequestComponent } from './common/email-destination-request/email-destination-request.component';
+import { SelectDestinationAnalysisComponent } from './common/select-destination-analysis/select-destination-analysis.component';
+import { EmailDestinationAnalysisComponent } from './common/email-destination-analysis/email-destination-analysis.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 // LSI
-import { InitialAnalysisRequestComponent } from './index/initial-analysis.component';
+import { InitialAnalysisLsiRequestComponent } from './lsi/request/initial-analysis-lsi-request.component';
+import { InitialAnalysisLsiAnswerComponent } from './lsi/answer/initial-analysis-lsi-answer.component';
+import { InitialAnalysisLsiApprovalComponent } from './lsi/approval/initial-analysis-lsi-approval.component';
 import { WjGridMultirowModule } from '@grapecity/wijmo.angular2.grid.multirow';
 
+// IS Common Module
+import { WorkflowIsComponent } from './common/workflow/is/workflow-is.component';
+
+// IS
+import { InitialAnalysisIsRequestComponent } from './is/request/initial-analysis-is-request.component';
+import { InitialAnalysisIsAnswerComponent } from './is/answer/initial-analysis-is-answer.component';
+import { InitialAnalysisIsApprovalComponent } from './is/approval/initial-analysis-is-approval.component';
+
+// MDD Common Module
+import { WorkflowMddComponent } from './common/workflow/mdd/workflow-mdd.component';
+
+// MDD SubScreens
+import { InitialAnalysisMddRequestComponent } from './mdd/request/initial-analysis-mdd-request.component';
+import { InitialAnalysisMddAnswerComponent } from './mdd/answer/initial-analysis-mdd-answer.component';
+import { InitialAnalysisMddApprovalComponent } from './mdd/approval/initial-analysis-mdd-approval.component';
+
+// Laser Common Module
+import { WorkflowLaserComponent } from './common/workflow/laser/workflow-laser.component';
 import { InitialAnalysisFinalReportComponent } from './common/final-report/final-report.component';
+
+// Laser subscreens
+import { InitialAnalysisLaserRequestComponent } from './laser/request/initial-analysis-laser-request.component';
+import { InitialAnalysisLaserAnswerComponent } from './laser/answer/initial-analysis-laser-answer.component'; 
+import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-analysis-laser-approval.component';
 
 @NgModule({
   imports: [
@@ -46,35 +73,61 @@ import { InitialAnalysisFinalReportComponent } from './common/final-report/final
     MatButtonModule,
   ],
   declarations: [
+    MainScreenLinksComponent,
     NavigationComponent,
     ModifyComponent,
     CreateComponent,
-    OutlineRequestLsiComponent,
+    OutlineRequestComponent,
+    AttachedFileComponent,
     InformationReturnedSamplesComponent,
-    AttachedFileLsiComponent,
-    RemarksLsiComponent,
-    WorkflowLsiComponent,
-    SelectDestinationRequestLsiComponent,
-    EmailDestinationRequestLsiComponent,
-    SelectDestinationAnalysisLsiComponent,
-    EmailDestinationAnalysisLsiComponent,
-    FooterLsiComponent,
+    RemarksComponent,
+    WorkflowComponent,
+    SelectDestinationRequestComponent,
+    EmailDestinationRequestComponent,
+    SelectDestinationAnalysisComponent,
+    EmailDestinationAnalysisComponent,
+    FooterComponent,
 
-    InitialAnalysisRequestComponent,
+    InitialAnalysisLsiRequestComponent,
+    InitialAnalysisLsiAnswerComponent,
+    InitialAnalysisLsiApprovalComponent,
+
+    WorkflowIsComponent,
+    InitialAnalysisIsRequestComponent,
+    InitialAnalysisIsAnswerComponent,
+    InitialAnalysisIsApprovalComponent,
+    
+    WorkflowMddComponent,
+    InitialAnalysisMddRequestComponent,
+    InitialAnalysisMddAnswerComponent,
+    InitialAnalysisMddApprovalComponent,
+
+    WorkflowLaserComponent,
     InitialAnalysisFinalReportComponent,
+
+    InitialAnalysisLaserRequestComponent,
+    InitialAnalysisLaserAnswerComponent,
+    InitialAnalysisLaserApprovalComponent,
   ],
   
   exports: [
-    OutlineRequestLsiComponent,
+    OutlineRequestComponent,
+    AttachedFileComponent,
     InformationReturnedSamplesComponent,
-    AttachedFileLsiComponent,
-    RemarksLsiComponent,
-    WorkflowLsiComponent,
-    SelectDestinationRequestLsiComponent,
-    EmailDestinationRequestLsiComponent,
-    SelectDestinationAnalysisLsiComponent,
-    EmailDestinationAnalysisLsiComponent,
-    FooterLsiComponent,
+    RemarksComponent,
+    WorkflowComponent,
+    SelectDestinationRequestComponent,
+    EmailDestinationRequestComponent,
+    SelectDestinationAnalysisComponent,
+    EmailDestinationAnalysisComponent,
+    FooterComponent,
+
+    
+    WorkflowIsComponent,
+    
+    WorkflowMddComponent,
+    
+    WorkflowLaserComponent,
   ], 
 
   providers: [ 

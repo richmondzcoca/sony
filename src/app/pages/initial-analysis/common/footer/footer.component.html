@@ -1,0 +1,112 @@
+<!-- LSI -->
+<div class="footer-btn" [ngClass]="{ 'request': currentRoute === 'lsi-request' }" *ngIf="currentRoute === 'lsi-request'">
+    <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L01026" | translate }}</button>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L01027" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute === 'lsi-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L01034" | translate }}</button>
+  </div>
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L01026" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L01035" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'lsi-approval' }" *ngIf="currentRoute === 'lsi-approval'">
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L01036" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L01037" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L01035" | translate }}</button>
+  </div>
+</div>
+
+<!-- IS -->
+<div class="footer-btn" *ngIf="currentRoute === 'is-request'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L03181" | translate }}</button>
+  </div>
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L03026" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L03035" | translate }}</button>
+  </div>  
+</div>
+  
+<div class="footer-btn" *ngIf="currentRoute === 'is-answer'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L03034" | translate }}</button>
+    </div>
+    <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L03026" | translate }}</button>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L03035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'is-approval' }" *ngIf="currentRoute === 'is-approval'">
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L03186" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L03187" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L03188" | translate }}</button>
+  </div>
+</div>
+
+<!-- Laser -->
+<div class="footer-btn" *ngIf="currentRoute === 'laser-request'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L06088" | translate }}</button>
+    </div>
+    <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L06026" | translate }}</button>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L06035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute ==='laser-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L06103" | translate }}</button>
+  </div>
+  <div>
+  <button class="btn btn-primary" (click)="showActions()">{{ "sqrm.SQ_L06104" | translate }}</button>
+  <button class="btn btn-primary" (click)="close()">{{ "sqrm.SQ_L06105" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'laser-approval' }" *ngIf="currentRoute === 'laser-approval'">
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L06036" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L06037" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L06035" | translate }}</button>
+  </div>
+</div>
+
+<!-- MDD -->
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-request'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L05091" | translate }}</button>
+    </div>
+    <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L05026" | translate }}</button>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L05035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L05034" | translate }}</button>
+  </div>
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L05096" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L05097" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'mdd-approval' }" *ngIf="currentRoute === 'mdd-approval'">
+  <div>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L05036" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L05037" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L05035" | translate }}</button>
+  </div>
+</div>
