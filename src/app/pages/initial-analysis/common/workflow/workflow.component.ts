@@ -27,7 +27,7 @@ import { SweetAlertResult } from 'sweetalert2';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkflowComponent implements OnInit {
-    @ViewChild('returnedSamplesGrid', { static: true }) grid: wjGrid.FlexGrid;
+    @ViewChild('returnedSamplesGrid', { static: false }) grid: wjGrid.FlexGrid;
     href: string = '';
     currentRoute: string = '';
 
@@ -91,7 +91,6 @@ export class WorkflowComponent implements OnInit {
             .confirm('sqrm.SQ_L01020')
             .then((res: SweetAlertResult) => {
                 if (res.isConfirmed) {
-                    // currentElement.closest('.wj-row').remove();
                   console.log('triggered...')
                   let newData = this.workFlowData.items.filter( data => data.recordId !== x );
                   this.workFlowData = new CollectionView(newData);

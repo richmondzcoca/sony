@@ -15,7 +15,7 @@
             <button class="btn btn-secondary" (click)="showAttachedSub()">Samplebtn</button> 
         </div>
     </div>
-    <div class="sub-screen-container">
+    <div class="sub-screen-container" *ngIf="currentRoute === 'lsi-request'">
         <wj-multi-row #returnedSamplesGrid #flex  
         [itemsSource]="workFlowData" 
         [headersVisibility]="'Column'" 

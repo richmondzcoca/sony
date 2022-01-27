@@ -27,7 +27,7 @@ import { SweetAlertResult } from 'sweetalert2';
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class InformationReturnedSamplesComponent implements OnInit {
-    @ViewChild('returnedSamplesGrid', { static: true }) grid: wjGrid.FlexGrid;
+    @ViewChild('returnedSamplesGrid', { static: false }) grid: wjGrid.FlexGrid;
     href: string = '';
     currentRoute: string = '';
 
@@ -42,7 +42,7 @@ export class InformationReturnedSamplesComponent implements OnInit {
     data1 = [{ name: 'monqiue' }, { name: 'clariza' }];
     includeColumnHeader = true;
     customContent = false;
-    @ViewChild('flex', { static: true }) flex: wjcGrid.FlexGrid;
+    @ViewChild('flex', { static: false }) flex: wjcGrid.FlexGrid;
     irsModeStatus: any ="Module Soc"
     irsMode : any = ['PKG Soc', 'Module Soc'];
 
