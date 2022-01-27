@@ -42,7 +42,7 @@ export class WorkflowComponent implements OnInit {
     data1 = [{ name: 'monqiue' }, { name: 'clariza' }];
     includeColumnHeader = true;
     customContent = false;
-    @ViewChild('flex', { static: true }) flex: wjcGrid.FlexGrid;
+    @ViewChild('flex', { static: false }) flex: wjcGrid.FlexGrid;
 
     x : string
     constructor(

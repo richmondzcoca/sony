@@ -27,7 +27,7 @@ import { SweetAlertResult } from 'sweetalert2';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AttachedFileComponent implements OnInit {
-    @ViewChild('returnedSamplesGrid', { static: true }) grid: wjGrid.FlexGrid;
+    @ViewChild('returnedSamplesGrid', { static: false }) grid: wjGrid.FlexGrid;
     href: string = '';
     currentRoute: string = '';
 
@@ -43,7 +43,7 @@ export class AttachedFileComponent implements OnInit {
     data1 = [{ name: 'monqiue' }, { name: 'clariza' }];
     includeColumnHeader = true;
     customContent = false;
-    @ViewChild('flex', { static: true }) flex: wjcGrid.FlexGrid;
+    @ViewChild('flex', { static: false }) flex: wjcGrid.FlexGrid;
 
     x : string
     constructor(
