@@ -8,6 +8,7 @@ import { fakeComboBox } from './routes/common/combobox.fake';
 
 import { environment } from 'src/environments/environment';
 import { fakeVariousSurvey } from './routes/_tmp/various-survey.fake';
+import { fakeInitialReturnedSample } from './routes/_tmp/initial-analysis.fake'
 
 interface ApiHandlerDefinition {
     path: string;
@@ -60,7 +61,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 { path: '/common/combobox', handler: fakeComboBox },
                 
             //modules
-                { path: '/_tmp/mon/investigates/', handler: fakeVariousSurvey }
+                { path: '/_tmp/mon/investigates/', handler: fakeVariousSurvey },
+                { path: '/_tmp/initial-analysis/', handler: fakeInitialReturnedSample }
             ];
         }
     }
