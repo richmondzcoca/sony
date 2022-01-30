@@ -148,8 +148,19 @@ export class NavigationComponent implements OnInit {
   }
   hasChild = (_: number, node: SqrmNode) => !!node.children && node.children.length > 0;
   
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onInitialized() {}
+
+  onClickExpand(){
+    document.querySelectorAll('button[mattreenodetoggle]').forEach( elem => {
+      if(elem.querySelector('mat-icon').innerHTML.includes('add')) (elem as any).click();
+    });
+  }
+
+  onClickCollapse(){
+    document.querySelectorAll('button[mattreenodetoggle]').forEach( elem => {
+      if(elem.querySelector('mat-icon').innerHTML.includes('remove')) (elem as any).click();
+    });
+  }
 }
