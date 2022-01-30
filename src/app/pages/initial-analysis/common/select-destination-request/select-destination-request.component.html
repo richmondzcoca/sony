@@ -1,5 +1,5 @@
-<!-- LSI request -->
-<div class="sub-screen" *ngIf="currentRoute === 'lsi-request'">
+<!-- request -->
+<div class="sub-screen" *ngIf="currentRoute.includes('request')">
   <div class="sub-screen-title">
       <div class="header-title">
         <span>{{ "sqrm.SQ_L01003" | translate }}</span>
@@ -14,8 +14,8 @@
   </div>
 </div>
 
-<!-- LSI answer OR LSI approval -->
-<div class="sub-screen" *ngIf="currentRoute === 'lsi-answer' || currentRoute === 'lsi-approval'">
+<!-- answer OR approval -->
+<div class="sub-screen" *ngIf="currentRoute.includes('answer') || currentRoute.includes('approval')">
   <div class="sub-screen-title">
       <div class="header-title">
         <span>{{ "sqrm.SQ_L01008" | translate }}</span>

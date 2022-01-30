@@ -1,13 +1,13 @@
-<!-- LSI answer OR LSI Approval -->
-<div class="sub-screen" *ngIf="currentRoute === 'lsi-answer' || currentRoute === 'lsi-approval'">
+<!-- answer OR Approval -->
+<div class="sub-screen" *ngIf="currentRoute.includes('answer') || currentRoute.includes('approval')">
   <div class="sub-screen-title">
-      <div class="header-title" *ngIf="currentRoute ==='lsi-answer'">
+      <div class="header-title" *ngIf="currentRoute.includes('answer')">
         {{ "sqrm.SQ_L01010" | translate }}
       </div>
-      <div class="header-title" *ngIf="currentRoute ==='lsi-approval'">
+      <div class="header-title" *ngIf="currentRoute.includes('approval')">
         {{ "sqrm.SQ_L01013" | translate }}
       </div>
-      <div class="actions" *ngIf="currentRoute ==='lsi-answer'">
+      <div class="actions" *ngIf="currentRoute.includes('answer')">
         <button class="btn btn-secondary">{{ "sqrm.SQ_L01022" | translate }}</button>
         <button class="btn btn-secondary">{{ "sqrm.SQ_L01020" | translate }}</button>
         <button class="btn btn-secondary">{{ "sqrm.SQ_L01023" | translate }}</button>

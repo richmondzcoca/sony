@@ -1,4 +1,4 @@
-<div class="sub-screen" *ngIf="currentRoute === 'lsi-request' || currentRoute === 'lsi-answer'">
+<div class="sub-screen">
   
   <div class="sub-screen-title">
     <p>{{ "sqrm.SQ_L01001" | translate }}</p>
@@ -13,7 +13,7 @@
             <td> <label id="analysisRequestNo">{{ 'sqrm.SQ_L01038' | translate }}</label></td>
             <td>{{ 'sqrm.SQ_L01039' | translate }}</td>
             <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
-            <td>{{ 'sqrm.SQ_L01040' | translate }}<span *ngIf="currentRoute === 'lsi-request'" class="required"></span></td>
+            <td>{{ 'sqrm.SQ_L01040' | translate }}<span *ngIf="currentRoute === 'request'" class="required"></span></td>
             <td><wj-input-date id="reportDateFinal" format="yyyy/MM/dd"></wj-input-date></td>
         </tr>
         <tr>
@@ -25,195 +25,10 @@
         <tr>
             <td>
               {{ 'sqrm.SQ_L01043' | translate }}
-              <div *ngIf="currentRoute === 'lsi-request'">{{ 'sqrm.SQ_L01044' | translate }}</div>
+              <div *ngIf="currentRoute === 'request'">{{ 'sqrm.SQ_L01044' | translate }}</div>
             </td>
             <td colspan="5" >
                 <textarea class="form-textarea style1" id="outlineOfRequest"></textarea>
-            </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-</div>
-
-
-<!-- Outline Request for LSI Approval -->
-<div class="sub-screen" *ngIf="currentRoute === 'lsi-approval'">
-  <div class="sub-screen-title">
-    <p>{{ "sqrm.SQ_L01001" | translate }}</p>
-  </div>
-  <div class="sub-screen-container">
-    <form #flex>
-      <table class="style1">
-        <tr>
-            <td>{{ 'sqrm.SQ_L01038' | translate }} </td>
-            <td><label>{{ 'sqrm.SQ_L01038' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L01039' | translate }} </td>
-            <td><label>{{ 'sqrm.SQ_L01039' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L01040' | translate }} </td>
-            <td><label>{{ 'sqrm.SQ_L01040' | translate }}</label></td>
-        </tr>
-        <tr>
-            <td>{{ 'sqrm.SQ_L01041' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L01041' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L01042' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L01042' | translate }}</label></td>
-        </tr>
-        <tr>
-            <td>{{ 'sqrm.SQ_L01043' | translate }}</td>
-            <td colspan="5" ><label>{{ 'sqrm.SQ_L01043' | translate }}</label></td>
-        </tr>
-      </table>
-    </form>
-  </div>
-</div>
-
-
-<div class="sub-screen"  *ngIf="currentRoute === 'is-request' || currentRoute === 'is-answer' || currentRoute === 'is-approval'">
-  
-  <div class="sub-screen-title">
-    <p>{{ "sqrm.SQ_L03001" | translate }}</p>
-    <button class="btn btn-secondary" (click)="exportInfoReturnedSamples()">{{ "sqrm.SQ_L00119" | translate }}</button>
-  </div>
-  <div class="sub-screen-container">
-    <form>
-      <table class="style1">
-        <tr>
-            <td>{{ 'sqrm.SQ_L03038' | translate }}</td>
-            <td> <label>{{ 'sqrm.SQ_L01038' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L03039' | translate }}</td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute !=='is-approval'"></wj-input-date>
-              <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03039' | translate }}</label>
-            </td>
-            <td>{{ 'sqrm.SQ_L03040' | translate }}<span *ngIf="currentRoute === 'is-request'" class="required"></span></td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute !=='is-approval'"></wj-input-date>
-              <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03040' | translate }}</label>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>{{ 'sqrm.SQ_L03041' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L03041' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L03042' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L03042' | translate }}</label></td>
-        </tr>
-        <tr>
-          <td>{{ 'sqrm.SQ_L03058' | translate }}<span *ngIf="currentRoute === 'is-request'" class="required"></span></td>
-          <td colspan="5">
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Pre-check</label>
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Visual check</label>
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > M check</label>
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > C check</label>
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > S check</label>
-             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Result</label>
-             <button class="btn btn-secondary margin-rl" *ngIf ="currentRoute ==='is-request'">Select all</button>
-          </td>
-        </tr>
-        <tr>
-            <td>
-              {{ 'sqrm.SQ_L03043' | translate }}
-              <div *ngIf="currentRoute !=='is-approval'">{{ 'sqrm.SQ_L03044' | translate }}</div>
-            </td>
-            <td colspan="5" >
-                <textarea class="form-textarea style1" *ngIf="currentRoute !== 'is-approval'"></textarea>
-                <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03043' | translate }}</label>
-            </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-</div>
-
-<div class="sub-screen"  *ngIf="currentRoute === 'laser-request' || currentRoute === 'laser-answer' || currentRoute === 'laser-approval'">
-  
-  <div class="sub-screen-title">
-    <p>{{ "sqrm.SQ_L06001" | translate }}</p>
-    <button class="btn btn-secondary " *ngIf="currentRoute === 'laser-request'" > {{ "sqrm.SQ_L01016" | translate }}</button>
-  </div>
-
-  <div class="sub-screen-container">
-    <form>
-      <table class="style1">
-        <tr>
-            <td>{{ 'sqrm.SQ_L06038' | translate }}</td>
-            <td> <label>{{ 'sqrm.SQ_L06038' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L06039' | translate }}</td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd"
-                *ngIf="currentRoute==='laser-request' || currentRoute ==='laser-answer'"></wj-input-date>
-                <label *ngIf="currentRoute === 'laser-approval'">{{ 'sqrm.SQ_L06039' | translate }}</label>
-            </td>
-            <td>{{ 'sqrm.SQ_L06040' | translate }}<span *ngIf="currentRoute === 'laser-request'" class="required"></span></td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd"
-              *ngIf="currentRoute==='laser-request' || currentRoute ==='laser-answer'"></wj-input-date>
-              <label *ngIf="currentRoute === 'laser-approval'">{{ 'sqrm.SQ_L06040' | translate }}</label>
-            </td>
-        </tr>
-        <tr>
-            <td>{{ 'sqrm.SQ_L06041' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L06041' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L06042' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L06042' | translate }}</label></td>
-        </tr>
-        <tr>
-            <td>
-              {{ 'sqrm.SQ_L06043' | translate }}
-              <div *ngIf="currentRoute === 'laser-request' || currentRoute ==='laser-answer'">{{ 'sqrm.SQ_L06044' | translate }}</div>
-            </td>
-            <td colspan="5" >
-              <textarea class="form-textarea style1" *ngIf="currentRoute === 'laser-answer'">□End face observation (through glass)&#13;&#10;□Baraana measurement&#13;&#10;□Appearance observation(engraved)
-              </textarea>
-              <ul class="code-editor-options-menu" *ngIf="currentRoute === 'laser-approval'">
-                <li *ngFor="let item of outlineReqData" class="block"><span>{{ item.name }}</span></li>
-              </ul>
-            </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-</div>
-
-<div class="sub-screen"  *ngIf="currentRoute === 'mdd-request' || currentRoute === 'mdd-answer' || currentRoute === 'mdd-approval'">
-  
-  <div class="sub-screen-title">
-    <p>{{ "sqrm.SQ_L05001" | translate }}</p>
-    <button class="btn btn-secondary " *ngIf="currentRoute === 'mdd-request'" > {{ "sqrm.SQ_L05016" | translate }}</button>
-  </div>
-
-  <div class="sub-screen-container">
-    <form>
-      <table class="style1">
-        <tr>
-            <td>{{ 'sqrm.SQ_L05038' | translate }}</td>
-            <td> <label>{{ 'sqrm.SQ_L05038' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L05039' | translate }}</td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute=== 'mdd-request' || currentRoute === 'mdd-answer'"></wj-input-date>
-              <label *ngIf ="currentRoute === 'mdd-approval'">{{ 'sqrm.SQ_L05039' | translate }}</label>
-            </td>
-            <td>{{ 'sqrm.SQ_L05040' | translate }}<span *ngIf="currentRoute === 'mdd-request'" class="required"></span></td>
-            <td>
-              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute=== 'mdd-request' || currentRoute === 'mdd-answer'"></wj-input-date>
-              <label *ngIf ="currentRoute === 'mdd-approval'">{{ 'sqrm.SQ_L05040' | translate }}</label>
-            </td>
-        </tr>
-        <tr>
-            <td>{{ 'sqrm.SQ_L05041' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L05041' | translate }}</label></td>
-            <td>{{ 'sqrm.SQ_L05042' | translate }}</td>
-            <td colspan="2"><label>{{ 'sqrm.SQ_L05042' | translate }}</label></td>
-        </tr>
-        <tr>
-            <td>
-              {{ 'sqrm.SQ_L05043' | translate }}
-              <div *ngIf="currentRoute === 'mdd-request' || currentRoute ==='mdd-answer'">{{ 'sqrm.SQ_L05044' | translate }}</div>
-            </td>
-            <td colspan="5" >
-                <textarea class="form-textarea style1" *ngIf="currentRoute !== 'mdd-approval'"></textarea>
-                <label *ngIf="currentRoute === 'mdd-approval'"></label>
             </td>
         </tr>
       </table>

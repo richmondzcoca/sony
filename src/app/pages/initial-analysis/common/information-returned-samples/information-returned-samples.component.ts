@@ -100,11 +100,10 @@ export class InformationReturnedSamplesComponent implements OnInit {
     
     exportInfoReturnedSamples() {
       console.log('triggered...')
-      console.log("this.flex: ",this.flex)
       let today = new Date().toISOString().slice(0, 10)
       let fileName = 'LSI'+ today +'.xlsx'
         wjcGridXlsx.FlexGridXlsxConverter.saveAsync(
-            this.flex,
+            this.grid,
             {
                 includeColumnHeaders: this.includeColumnHeader,
                 includeCellStyles: false,
@@ -116,7 +115,7 @@ export class InformationReturnedSamplesComponent implements OnInit {
     
 
     save() {
-      wjcGridXlsx.FlexGridXlsxConverter.saveAsync(this.flex,
+      wjcGridXlsx.FlexGridXlsxConverter.saveAsync(this.grid,
           {
               includeColumnHeaders: this.includeColumnHeader,
               includeCellStyles: false,
@@ -127,10 +126,9 @@ export class InformationReturnedSamplesComponent implements OnInit {
 
   load() {
       let fileInput = <HTMLInputElement>document.getElementById('importFile');
-      console.log("this.flex: ", this.flex);
       if (fileInput.files[0]) {
           this.customContent = false;
-          wjcGridXlsx.FlexGridXlsxConverter.loadAsync(this.flex, fileInput.files[0], { includeColumnHeaders: this.includeColumnHeader });
+          wjcGridXlsx.FlexGridXlsxConverter.loadAsync(this.grid, fileInput.files[0], { includeColumnHeaders: this.includeColumnHeader });
       }
   }
 

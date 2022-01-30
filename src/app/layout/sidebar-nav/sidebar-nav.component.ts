@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, AfterViewInit } from '@angular/core';
 import { WjAccordion } from '@grapecity/wijmo.angular2.nav';
+
 @Component({
 
     templateUrl: './sidebar-nav.component.html',
@@ -15,6 +16,7 @@ export class SideBarNavComponent implements OnInit, AfterViewInit {
     constructor() { }
 
     ngOnInit(): void {
+        
     }
 
     ngAfterViewInit(): void {

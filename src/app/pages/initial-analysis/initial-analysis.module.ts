@@ -30,29 +30,13 @@ import { SelectDestinationAnalysisComponent } from './common/select-destination-
 import { EmailDestinationAnalysisComponent } from './common/email-destination-analysis/email-destination-analysis.component';
 import { FooterComponent } from './common/footer/footer.component';
 
-// LSI
-import { InitialAnalysisLsiRequestComponent } from './lsi/request/initial-analysis-lsi-request.component';
-import { InitialAnalysisLsiAnswerComponent } from './lsi/answer/initial-analysis-lsi-answer.component';
-import { InitialAnalysisLsiApprovalComponent } from './lsi/approval/initial-analysis-lsi-approval.component';
+import { InitialAnalysisRequestComponent } from './request/initial-analysis-request.component';
+import { InitialAnalysisAnswerComponent } from './answer/initial-analysis-answer.component';
+import { InitialAnalysisApprovalComponent } from './approval/initial-analysis-approval.component';
 import { WjGridMultirowModule } from '@grapecity/wijmo.angular2.grid.multirow';
 
-// IS
-import { InitialAnalysisIsRequestComponent } from './is/request/initial-analysis-is-request.component';
-import { InitialAnalysisIsAnswerComponent } from './is/answer/initial-analysis-is-answer.component';
-import { InitialAnalysisIsApprovalComponent } from './is/approval/initial-analysis-is-approval.component';
-
-// MDD SubScreens
-import { InitialAnalysisMddRequestComponent } from './mdd/request/initial-analysis-mdd-request.component';
-import { InitialAnalysisMddAnswerComponent } from './mdd/answer/initial-analysis-mdd-answer.component';
-import { InitialAnalysisMddApprovalComponent } from './mdd/approval/initial-analysis-mdd-approval.component';
-
-// Laser Common Module
+// Common Module
 import { InitialAnalysisFinalReportComponent } from './common/final-report/final-report.component';
-
-// Laser subscreens
-import { InitialAnalysisLaserRequestComponent } from './laser/request/initial-analysis-laser-request.component';
-import { InitialAnalysisLaserAnswerComponent } from './laser/answer/initial-analysis-laser-answer.component'; 
-import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-analysis-laser-approval.component';
 
 @NgModule({
   imports: [
@@ -81,23 +65,11 @@ import { InitialAnalysisLaserApprovalComponent } from './laser/approval/initial-
     EmailDestinationAnalysisComponent,
     FooterComponent,
 
-    InitialAnalysisLsiRequestComponent,
-    InitialAnalysisLsiAnswerComponent,
-    InitialAnalysisLsiApprovalComponent,
-
-    InitialAnalysisIsRequestComponent,
-    InitialAnalysisIsAnswerComponent,
-    InitialAnalysisIsApprovalComponent,
-    
-    InitialAnalysisMddRequestComponent,
-    InitialAnalysisMddAnswerComponent,
-    InitialAnalysisMddApprovalComponent,
+    InitialAnalysisRequestComponent,
+    InitialAnalysisAnswerComponent,
+    InitialAnalysisApprovalComponent,
 
     InitialAnalysisFinalReportComponent,
-
-    InitialAnalysisLaserRequestComponent,
-    InitialAnalysisLaserAnswerComponent,
-    InitialAnalysisLaserApprovalComponent,
   ],
   
   exports: [

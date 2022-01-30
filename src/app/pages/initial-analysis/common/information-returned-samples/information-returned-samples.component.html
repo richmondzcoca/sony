@@ -8,21 +8,28 @@
             </div>
           </div>      
           <div class="actions">
-            <p>{{ "sqrm.SQ_L01077" | translate  }}</p>
-            <p>{{ "sqrm.SQ_L01078" | translate  }}</p>
-            <button class="btn btn-secondary">{{ "sqrm.SQ_L01018" | translate }}</button>
-            <button class="btn btn-secondary">{{ "sqrm.SQ_L01019" | translate }}</button>
-            <div class="pagination-container">
-              <p>{{ currentPage }}</p>
-              <select>
-                <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
-              </select>
-            </div>
+            <ng-container *ngIf="!currentRoute.includes('answer')">
+                <p>{{ "sqrm.SQ_L01077" | translate  }}</p>
+                <p>{{ "sqrm.SQ_L01078" | translate  }}</p>
+                <button class="btn btn-secondary">{{ "sqrm.SQ_L01018" | translate }}</button>
+                <button class="btn btn-secondary">{{ "sqrm.SQ_L01019" | translate }}</button>
+                <div class="pagination-container">
+                <p>{{ currentPage }}</p>
+                <select>
+                    <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+                </select>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="currentRoute.includes('answer')">
+                <input type="file" id="importFile" name="filename" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel.sheet.macroEnabled.12">
+                <button class="btn btn-secondary" (click)="load()">{{ "sqrm.SQ_L01028" | translate }}</button>
+                <button class="btn btn-secondary" (click)="exportInfoReturnedSamples()">{{ "sqrm.SQ_L01029" | translate }}</button>
+            </ng-container>
             <button class="btn btn-secondary" style="margin-left: 10px;">{{ "sqrm.SQ_L01017" | translate }}</button>
             <select [(ngModel)]="selectedCategory" (change)="onChangeCategory()">
                 <option *ngFor="let i of categoryDropdown" value="{{i}}">{{i}}</option>
             </select>
-          </div>
+        </div>
     </div>
     <div class="sub-screen-container">
         <!-- LSI || IS || DD -->

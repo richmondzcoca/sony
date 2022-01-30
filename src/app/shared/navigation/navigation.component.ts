@@ -30,32 +30,32 @@ const TREE_DATA: SqrmNode[] = [
     name: "K19-9008", 
     children: [
       // { name: "Modify attached files" , url: "/initial-analysis/is-request"},
-      { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+      { name: "Modify attached files" , url: "/initial-analysis/request/modify"},
       { name: "Unknown", url: "/initial-analysis/is-request" },
       {
         name:"Initial analysis", 
         url: "/initial-analysis/is-request",
         children: [
           // { name: "Create new page" , url: "/initial-analysis/is-request"},
-          { name: "Create new page" , url: "/initial-analysis/lsi-request/create"},
+          { name: "Create new page" , url: "/initial-analysis/request/create"},
           { name: "K19-9008-F01 Ver. 1", url:"/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files", url: "/initial-analysis/is-request"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+              { name: "Modify attached files" , url: "/initial-analysis/modify"},
             ]
           },
           { name: "K19-9008-F01 Ver.2",
             url: "/initial-analysis/is-request",
             children:[
               // { name:"Modify attached files"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"},
             ]
           },
           { name: "K19-9008-F01 Ver.3",
             url: "/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files", url: "/initial-analysis/is-request"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"},
             ]
           }
         ]
@@ -65,26 +65,26 @@ const TREE_DATA: SqrmNode[] = [
         url: "/initial-analysis/is-request",
         children: [
           // { name: "Create new page", url: "/initial-analysis/is-request" },
-          { name: "Create new page" , url: "/initial-analysis/lsi-request/create"},
+          { name: "Create new page" , url: "/initial-analysis/request/create"},
           { name: "K19-9008-G01 Ver. 1",
             url: "/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files", url: "/initial-analysis/is-request" }
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"},
             ]
           },
           { name: 'K19-9008-G01 Ver.2',
             url: '/initial-analysis/is-request',
             children:[
               // { name: 'Modify attached files'}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"},
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"},
             ]
           },
           { name: 'K19-9008-G01 Ver.3',
             url: '/initial-analysis/is-request',
             children:[
               // { name: 'Modify attached files'}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"}
             ]
           }
         ]
@@ -97,21 +97,21 @@ const TREE_DATA: SqrmNode[] = [
             url: "/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files", url: "/initial-analysis/is-request"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"}
             ]
           },
           { name: "K19-9008-H01 Ver.2 (Report date: 2019/11/29 Final)",
             url: "/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"}
             ]
           },
           { name: "K19-9008-H01 Ver.3 (Report date: 2019/11/24)",
             url: "/initial-analysis/is-request",
             children:[
               // { name: "Modify attached files"}
-              { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
+              { name: "Modify attached files" , url: "/initial-analysis/request/modify"}
             ]
           },
           { name:"History of report sending", url: "" }
@@ -124,7 +124,7 @@ const TREE_DATA: SqrmNode[] = [
         url:"",
         children:[
           // { name: "Modify attached files"}
-          { name: "Modify attached files" , url: "/initial-analysis/lsi-request/modify"}
+          { name: "Modify attached files" , url: "/initial-analysis/request/modify"}
         ]
       },
       { name: "History", url:"" }
@@ -143,14 +143,13 @@ export class NavigationComponent implements OnInit {
   treeControl = new NestedTreeControl<SqrmNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<SqrmNode>();
   constructor( 
-    private dialog: MatDialog,
-    private dialogService: DialogService,
   ) {
     this.dataSource.data = TREE_DATA;
   }
   hasChild = (_: number, node: SqrmNode) => !!node.children && node.children.length > 0;
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   onInitialized() {}
 }
