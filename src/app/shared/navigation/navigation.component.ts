@@ -13,6 +13,7 @@ import { DialogService } from 'src/app/core/services/dialog.service';
 
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
+import { NavigationDataService } from 'src/app/data/service/_tmp/module/navigation/navigation-data.service';
 
 
 /**
@@ -142,13 +143,16 @@ const TREE_DATA: SqrmNode[] = [
 export class NavigationComponent implements OnInit {
   treeControl = new NestedTreeControl<SqrmNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<SqrmNode>();
-  constructor( 
+  constructor(
+    private navigationDataService: NavigationDataService
   ) {
-    this.dataSource.data = TREE_DATA;
+    // this.dataSource.data = TREE_DATA;
   }
   hasChild = (_: number, node: SqrmNode) => !!node.children && node.children.length > 0;
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.navigationDataService.getNavigationData('K19-9008').subscribe(res => this.dataSource.data = res);
+  }
 
   onInitialized() {}
 
